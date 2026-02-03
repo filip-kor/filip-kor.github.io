@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Website</title>
+    <title>Name Surname</title>
     <style>
         body {
-            background-color: #f5f5dc; /* Light beige */
+            background-color: #fdfdf0; /* lighter beige */
             margin: 0;
             padding: 0;
             font-family: 'Courier New', Courier, monospace;
+            color: #111;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -17,58 +18,105 @@
         }
 
         .main {
-            max-width: 600px; /* Not too wide */
-            width: 100%;
-            padding: 20px;
+            max-width: 640px;
+            width: 90%;
+            padding: 40px 20px;
             box-sizing: border-box;
+        }
+
+        .header {
+            text-align: left;
+            margin-bottom: 40px;
+        }
+
+        .name {
+            font-size: 2.8rem;
+            font-weight: normal;
+            margin: 0;
+            letter-spacing: -1px;
+            color: #000;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: #444;
+            margin-top: 8px;
+            opacity: 0.85;
         }
 
         .links {
             list-style-type: none;
             padding: 0;
             margin: 0;
-            text-align: left;
         }
 
         .links li {
-            margin-bottom: 10px;
+            margin-bottom: 16px;
         }
 
         .links a {
             color: #000;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 1.35rem;
+            transition: all 0.12s ease;
         }
 
         .links a:hover {
+            color: #333;
             text-decoration: underline;
+            text-underline-offset: 3px;
         }
 
-        /* Responsive adjustments */
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 1.1em;
+            background: #000;
+            vertical-align: middle;
+            animation: blink 1.1s step-end infinite;
+            margin-left: 4px;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
             .main {
-                padding: 10px;
+                padding: 30px 15px;
             }
-
+            .name {
+                font-size: 2.4rem;
+            }
             .links a {
-                font-size: 16px;
+                font-size: 1.25rem;
             }
         }
 
         @media (max-width: 480px) {
             .main {
-                max-width: 100%;
-                padding: 5px;
+                width: 94%;
+                padding: 25px 12px;
             }
-
+            .name {
+                font-size: 2.1rem;
+            }
             .links a {
-                font-size: 14px;
+                font-size: 1.15rem;
             }
         }
     </style>
 </head>
 <body>
     <div class="main">
+        <div class="header">
+            <h1 class="name">Name Surname</h1>
+            <div class="tagline">
+                > building things at the edge of taste and compute<span class="cursor"></span>
+            </div>
+        </div>
+
         <ul class="links">
             <li><a href="art_projects.html">art projects</a></li>
             <li><a href="ai_projects.html">ai projects</a></li>
