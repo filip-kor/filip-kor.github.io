@@ -1,9 +1,79 @@
-<!doctype html>
-<html>
-  <head>
-    <title>This is the title of the webpage!</title>
-  </head>
-  <body>
-    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <style>
+        body {
+            background-color: #f5f5dc; /* Light beige */
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .main {
+            max-width: 600px; /* Not too wide */
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .links {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        .links li {
+            margin-bottom: 10px;
+        }
+
+        .links a {
+            color: #000;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .main {
+                padding: 10px;
+            }
+
+            .links a {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main {
+                max-width: 100%;
+                padding: 5px;
+            }
+
+            .links a {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <ul class="links">
+            <li><a href="art_projects.html">art projects</a></li>
+            <li><a href="ai_projects.html">ai projects</a></li>
+            <li><a href="contact.html">contact</a></li>
+        </ul>
+    </div>
+</body>
 </html>
