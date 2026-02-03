@@ -74,11 +74,17 @@
             border: 1px solid #e0e0d0;
             border-radius: 5px;
             background: #fefefa;
-            padding: 6px 10px;
+            padding: 8px 12px;
             display: flex;
             align-items: center;
             font-size: 1.05rem;
             box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+        .prompt-symbol {
+            color: #555;
+            margin-right: 6px;
+            font-weight: bold;
+            opacity: 0.6;
         }
         .message-input {
             flex: 1;
@@ -88,11 +94,11 @@
             font-size: inherit;
             background: transparent;
             color: #111;
-            padding: 10px 4px;
+            padding: 8px 0;
         }
         .message-input::placeholder {
-            color: #777;
-            opacity: 0.65;
+            color: #888;
+            opacity: 0.6;
         }
         .send-btn {
             background: #222;
@@ -109,18 +115,7 @@
             background: #444;
         }
 
-        .cursor {
-            display: inline-block;
-            width: 8px;
-            height: 1.1em;
-            background: #222;
-            vertical-align: middle;
-            animation: blink 1.2s step-end infinite;
-            margin-left: 3px;
-        }
-        @keyframes blink {
-            50% { opacity: 0; }
-        }
+        /* No blinking cursor anymore */
 
         /* Responsive adjustments */
         @media (max-width: 768px) {
@@ -148,7 +143,7 @@
                 font-size: 1.15rem;
             }
             .message-box {
-                padding: 5px 8px;
+                padding: 7px 10px;
             }
             .send-btn {
                 padding: 8px 14px;
@@ -175,11 +170,12 @@
 
     <div class="message-container">
         <div class="message-box">
+            <span class="prompt-symbol">>_</span>
             <input 
                 type="text" 
                 class="message-input" 
                 placeholder="message me — leave contact"
-            ><span class="cursor"></span>
+            >
             <button class="send-btn">send</button>
         </div>
     </div>
