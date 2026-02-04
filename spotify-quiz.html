@@ -133,12 +133,39 @@
             max-width: 90%;
             max-height: 90%;
             position: relative;
+            display: flex;
+            align-items: center;
         }
         .modal-content img {
             width: 100%;
             height: auto;
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.5);
+            color: white;
+            text-decoration: none;
+            font-size: 2rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s ease;
+        }
+        .arrow:hover {
+            background: rgba(0,0,0,0.7);
+        }
+        .arrow.left {
+            left: -75px;
+        }
+        .arrow.right {
+            right: -75px;
         }
         .close {
             position: absolute;
@@ -260,38 +287,50 @@
     <!-- Modals -->
     <div id="modal1" class="modal">
         <div class="modal-content">
-            <a href="#" class="close">&times;</a>
+            <a href="#modal6" class="arrow left">&larr;</a>
             <img src="img/spotify_quiz/gallery.jpg" alt="Spotify Quiz Game Screenshot">
+            <a href="#modal2" class="arrow right">&rarr;</a>
+            <a href="#" class="close">&times;</a>
         </div>
     </div>
     <div id="modal2" class="modal">
         <div class="modal-content">
-            <a href="#" class="close">&times;</a>
+            <a href="#modal1" class="arrow left">&larr;</a>
             <img src="img/spotify_quiz/gallery-1.jpg" alt="Game Lobby Interface">
+            <a href="#modal3" class="arrow right">&rarr;</a>
+            <a href="#" class="close">&times;</a>
         </div>
     </div>
     <div id="modal3" class="modal">
         <div class="modal-content">
-            <a href="#" class="close">&times;</a>
+            <a href="#modal2" class="arrow left">&larr;</a>
             <img src="img/spotify_quiz/gallery (1).jpg" alt="Quiz Question Example">
+            <a href="#modal4" class="arrow right">&rarr;</a>
+            <a href="#" class="close">&times;</a>
         </div>
     </div>
     <div id="modal4" class="modal">
         <div class="modal-content">
-            <a href="#" class="close">&times;</a>
+            <a href="#modal3" class="arrow left">&larr;</a>
             <img src="img/spotify_quiz/gallery (2).jpg" alt="Player Scoreboard">
+            <a href="#modal5" class="arrow right">&rarr;</a>
+            <a href="#" class="close">&times;</a>
         </div>
     </div>
     <div id="modal5" class="modal">
         <div class="modal-content">
-            <a href="#" class="close">&times;</a>
+            <a href="#modal4" class="arrow left">&larr;</a>
             <img src="img/spotify_quiz/gallery (3).jpg" alt="Spotify Integration">
+            <a href="#modal6" class="arrow right">&rarr;</a>
+            <a href="#" class="close">&times;</a>
         </div>
     </div>
     <div id="modal6" class="modal">
         <div class="modal-content">
-            <a href="#" class="close">&times;</a>
+            <a href="#modal5" class="arrow left">&larr;</a>
             <img src="img/spotify_quiz/gallery (4).jpg" alt="Mobile Responsive Design">
+            <a href="#modal1" class="arrow right">&rarr;</a>
+            <a href="#" class="close">&times;</a>
         </div>
     </div>
 </body>
